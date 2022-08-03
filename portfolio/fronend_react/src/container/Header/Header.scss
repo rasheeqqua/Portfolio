@@ -1,0 +1,193 @@
+#home {
+    position: relative;
+    background-color: #e3dcef;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%238a8691' fill-opacity='0.11' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    // background: url("../../assets/bgIMG.png");
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: repeat;
+
+    .app__wrapper {
+        padding: 0;
+    
+        .copyright {
+            display: none;
+        }
+    }
+}
+
+.app__header {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  
+    padding: 6rem 2rem 0rem;
+
+    @media screen and (min-width: 2000px) {
+        padding-top: 8rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 450px) {
+        padding: 6rem 1rem 2rem;
+    }
+}
+
+.app__header-info {
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+
+.app__header-badge {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+  
+    .badge-cmp, .tag-cmp {
+        padding: 1rem 2rem;
+        background: var(--white-color);
+        border-radius: 15px;
+        flex-direction: row;
+        width: auto;
+
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag-cmp {
+        flex-direction: column;
+        margin-top: 1rem;
+    
+        p {
+          width: 100%;
+          text-transform: capitalize;
+          text-align: center;
+        }
+    }
+
+    span {
+      font-size: 2.5rem;
+    
+      @media screen and (min-width: 2000px) {
+        font-size: 5rem;
+      }
+    }
+    
+    @media screen and (max-width: 1200px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+}
+
+
+.app__header-circles {
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1rem;
+
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    
+        background: var(--white-color);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    
+        img {
+          width: 60%;
+          height: 60%;
+        }
+    }
+
+    div:nth-child(1) {
+        width: 100px;
+        height: 100px;
+    }
+    
+    div:nth-child(2) {
+        margin: 1.75rem;
+        width: 150px;
+        height: 150px;
+    }
+    
+    div:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+
+    @media screen and (min-width: 2000px) {
+        div:nth-child(1) {
+          width: 400px;
+          height: 400px;
+        }
+    
+        div:nth-child(2) {
+          width: 170px;
+          height: 170px;
+        }
+    
+        div:nth-child(3) {
+          width: 200px;
+          height: 200px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+    
+        div {
+          margin: 1rem;
+        }
+    }
+}
+
+.app__header-img {
+    flex: 1;
+    height: 100%;
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+  
+    img {
+      width: 100%;
+      object-fit: contain;
+      z-index: 1;
+    }
+  
+    .overlay_circle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      width: 100%;
+      height: 90%;
+    }
+  
+    @media screen and (max-width: 1200px) {
+      margin: 2rem 0;
+    }
+  }
